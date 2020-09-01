@@ -19,25 +19,18 @@ public class Offer03 {
     // https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-shi-ti-03-shu-zu-zhong-zhong-fu-de-shu-zi-yua/
     public int findRepeatNumber(int[] nums) {
         int n = nums.length;
-        int i =0;
-        while (i<n){
-            if (nums[i] == i){
+        int i = 0;
+        while (i < n) {
+            if (nums[i] == i) {
                 i++;
                 continue;
             }
-            if (nums[i] == nums[nums[i]]){
+            if (nums[i] == nums[nums[i]]) {
                 return nums[i];
             }
-
             int temp = nums[i];
             nums[i] = nums[temp];
             nums[temp] = temp;
-
-//            for (int j = 0; j < n; j++) {
-//                System.out.print(nums[j]+" ");
-//
-//            }
-//            System.out.println();
         }
         return -1;
     }
