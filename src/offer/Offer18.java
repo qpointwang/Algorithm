@@ -25,15 +25,6 @@ package offer;
  */
 
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
 public class Offer18 {
     public ListNode deleteNode(ListNode head, int val) {
         ListNode cur = head;
