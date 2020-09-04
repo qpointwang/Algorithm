@@ -69,14 +69,14 @@ public class Offer19 {
                         if (i >= 1 && j >= 2 && (s.charAt(i - 1) == p.charAt(j - 2) || p.charAt(j - 2) == '.')) {
                             dp[i][j] |= dp[i - 1][j];
                         }
-                        System.out.println(j-1+" "+p.charAt(j - 1));
+                        System.out.println(j - 1 + " " + p.charAt(j - 1));
                     } else { // j-1位置是 普通字符或者 .
                         if (i >= 1 && (s.charAt(i - 1) == p.charAt(j - 1) || p.charAt(j - 1) == '.')) {
                             dp[i][j] = dp[i - 1][j - 1];
                         }
                     }
                 }
-                System.out.println("s为 \""+s.substring(0,i) + "\" p为\"" + p.substring(0,j) + "\"时 " + dp[i][j]);
+                System.out.println("s为 \"" + s.substring(0, i) + "\" p为\"" + p.substring(0, j) + "\"时 " + dp[i][j]);
             }
         }
         /**
